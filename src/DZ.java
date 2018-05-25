@@ -1,33 +1,33 @@
 public class DZ {
     public static void main (String[] args){
 
-        int a = 7, b = 2, c=3;
+        double a = 7, b = 2, c=3;
 /*
 1) Найти результат выражения для произвольных значений a,b,c:
 a + b * c / 2
  */
-        System.out.println("Решение задания № 1:" + a+b*c/2);
+        System.out.println("Решение задания № 1: " + (a+b*c/2));
 
 /*
 2) Найти результат выражения для произвольных значений a,b:
 ( a2 + b2 ) / 2
  */
-        System.out.println("Решение задания № 2:" + (Math.pow(a,2) + Math.pow(b,2)) / 2);
+        System.out.println("Решение задания № 2: " + (Math.pow(a,2) + Math.pow(b,2)) / 2);
         /*
         3) Найти результат выражения для произвольных значений a,b,c:
 ( a + b ) / 12 * c % 4 + b
          */
-        System.out.println("Решение задания № 3:" +( a + b ) / 12 * c % 4 + b);
+        System.out.println("Решение задания № 3: " +(( a + b ) / 12 * c % 4 + b));
 
         /*
        4) Найти результат выражения для произвольных значений a,b,c:
 (a - b * c ) / ( a + b ) % c
          */
-        System.out.println("Решение задания № 4:" + (a - b * c ) / ( a + b ) % c); /* или чтобы засчиталось, как правильно выполненное задание необходимо подобрать так, чтобы число до деления остатка было не дробное?*/
+        System.out.println("Решение задания № 4: " + (a - b * c ) / ( a + b ) % c); /* или чтобы засчиталось, как правильно выполненное задание необходимо подобрать так, чтобы число до деления остатка было не дробное?*/
 
         // 5. Найти результат выражения для произвольных значений a,b,c: | a - b | / ( a + b )3 - cos( c )
         int a5 = 6, b5 = 9, c5 = 78;
-        System.out.println("Решение задания № 5:" + (Math.abs(a5 - b5) / Math.pow((a5+b5), 3) - Math.cos(Math.toRadians(c5))));
+        System.out.println("Решение задания № 5: " + (Math.abs(a5 - b5) / Math.pow((a5+b5), 3) - Math.cos(Math.toRadians(c5))));
 
         // 6. В переменных a и b лежат положительные длины катетов прямоугольного треугольника.
         // Вычислить и вывести на экран площадь треугольника и его периметр.
@@ -50,7 +50,7 @@ a + b * c / 2
         S3 = a3*b3*Math.sin(Math.toRadians(d3))/2;
         c3 = Math.sqrt(Math.pow(a3, 2) + Math.pow(b3, 2) - 2*a3*b3*Math.cos(Math.toRadians(d3)));
         P3 = a3 + b3 +c3;
-        System.out.println("Решение задания № 8: Площадь треугольника = " + S3 + ". Периметр = " + P1 + "Третья сторона = " + c3 );
+        System.out.println("Решение задания № 8: Площадь треугольника = " + S3 + ". Периметр = " + P3 + "Третья сторона = " + c3 );
 
         // 9. Дети слепили снеговика из 3х идеальной формы шаров снега. Шары получились радиусами 1м, 0.5м и 0.2м.
         // Учитывая, что коэффициент плотности снежных шаров равен 0.7кг/м3, найти сколько весит снеговик.
@@ -64,7 +64,106 @@ a + b * c / 2
         m9 = m91 + m92 + m93;
         System.out.println("Решение задания № 9: Снеговик весит " + m9 + "кг");
 
+        // 10. Записать решение задач 1-5 в виде отдельных функций
+        // Найти результат выражения для произвольных значений a,b,c:     a + b * c / 2
+        System.out.println("Решение задания № 10.1: " + Zadanie1(a,b,c));
+
+        //Найти результат выражения для произвольных значений a,b:       ( a2 + b2 ) / 2
+        System.out.println("Решение задания № 10.2: " + Zadanie2(a,b));
+
+        // Найти результат выражения для произвольных значений a,b,c:    ( a + b ) / 12 * c % 4 + b
+        System.out.println("Решение задания № 10.3: " + Zadanie3(a,b,c));
+
+        //Найти результат выражения для произвольных значений a,b,c:      (a - b * c ) / ( a + b ) % c
+        System.out.println("Решение задания № 10.4: " + Zadanie4(a,b,c));
+
+        //Найти результат выражения для произвольных значений a,b,c: | a - b | / ( a + b )3 - cos( c )
+        System.out.println("Решение задания № 10.5: " + Zadanie5(a5,b5,c5));
+
+        // 11. Записать решение задач 6-9 с использованием функций
+
+        // В переменных a и b лежат положительные длины катетов прямоугольного треугольника.
+        // Вычислить и вывести на экран площадь треугольника и его периметр.
+        System.out.println("Решение задания № 11.6: Площадь треугольника = " + Zadanie6_1(a1,b1) + ", а Периметр = " + Zadanie6_2(a1,b1));
+
+        // Даны координаты двух вершин прямоугольника, которые находятся на противоположных концах диагонали.
+        // Стороны прямоугольника параллельны осям координат. Найти площадь прямоугольника и его периметр
+        System.out.println("Решение задания № 11.7: Площадь прямоугольника = " + Zadanie7_1(x21,x22,y21,y22) + ", а Периметр = " + Zadanie7_2(x21,x22,y21,y22));
+
+        // Дано две стороны треугольника и угол между ними в градусах. Найти длину третьей стороны, периметр и площадь треугольника.
+        System.out.println("Решение задания № 11.8: Площадь треугольника = " + Zadanie8_1(a3,b3,d3) + ". Периметр = " + Zadanie8_3(a3,b3,d3) + "Третья сторона = " + Zadanie8_2(a3,b3,d3) );
+
+        // Дети слепили снеговика из 3х идеальной формы шаров снега. Шары получились радиусами 1м, 0.5м и 0.2м.
+        // Учитывая, что коэффициент плотности снежных шаров равен 0.7кг/м3, найти сколько весит снеговик.
+
+        System.out.println("Решение задания № 11.9: Снеговик весит " + Zadanie9(r91,r92,r93,Pl) + "кг");
+
+        // 12. Написать две функции для обменника валют: одна - для конвертирования гривен в доллары, вторая - наоборот. Функции должны принимать в параметре одну валюту, а возвращать другую.
+
+
+
+
 
 
     }
+    public static double Zadanie1 (double a, double b, double c){
+        double O = a+b*c/2;
+        return O;
+    }
+    public static double Zadanie2(double a, double b){
+        double O = (Math.pow(a,2) + Math.pow(b,2)) / 2;
+        return O;
+    }
+public static double Zadanie3(double a, double b, double c){
+        double O = ( a + b ) / 12 * c % 4 + b;
+        return O;
+}
+public static double Zadanie4(double a, double b, double c){
+        double O = (a - b * c ) / ( a + b ) % c;
+return O;
+}
+public static double Zadanie5(double a, double b, double c){
+        double O = (Math.abs(a - b) / Math.pow((a+b), 3) - Math.cos(Math.toRadians(c)));
+        return O;
+}
+public static double Zadanie6_1 (double a, double b){ //Площадь треугольника
+        double S = a*b/2;
+        return S;
+    }
+    public static double Zadanie6_2 (double a, double b){ //Периметр треугольника
+       double c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+        double P = a + b + c;
+        return P;
+    }
+    public static double Zadanie7_1(double x1, double x2, double y1, double y2){ // Площадь прямоугольника
+        double S = Math.abs(x1 - x2)*Math.abs(y1-y2);
+        return S;
+    }
+    public static double Zadanie7_2 (double x1, double x2, double y1, double y2){ //Периметр прямоугольника
+        double P = 2*Math.abs(x1 - x2) + 2*Math.abs(y1-y2);
+        return P;
+
+    }
+    public static double Zadanie8_1 (double a, double b, double d){ //Площадь треугольника
+       double S = a*b*Math.sin(Math.toRadians(d))/2;
+        return S;
+    }
+    public static double Zadanie8_2 (double a, double b, double d) { //третья сторона треугольника
+        double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) - 2*a*b*Math.cos(Math.toRadians(d)));
+        return c;
+    }
+    public static double Zadanie8_3 (double a, double b, double d){ //периметр сторона треугольника
+        double P = a + b + Zadanie8_2(a, b, d);
+        return P;
+}
+public static double Zadanie9 (double r1, double r2, double r3, double Pl){
+    double V1 = 4/3*3.14*Math.pow(r1, 3);
+    double V2 = 4/3*3.14*Math.pow(r2, 3);
+    double V3 = 4/3*3.14*Math.pow(r3, 3);
+    double m1 = V1*Pl;
+    double m2 = V2*Pl;
+    double m3 = V3*Pl;
+    double m = m1 + m2 + m3;
+    return m;
+}
 }
