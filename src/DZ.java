@@ -111,7 +111,10 @@ System.out.println("Cо времени колонизации прошло " + D
 // Напишите функцию, которая по этому числу найдет сколько всего прошли туристы (т.е. Задано число 473. По этому числу рассчитывается общий путь: 4+7+3=14 миль).
         int Dis = 473;
         System.out.println("Задание 14: туристы всего прошли - " +Distance(Dis)+ " миль");
-       
+        //15 Задание
+        int OL = 2;
+        PArnost(OL);
+
 
     }
     // 10. Записать решение задач 1-5 в виде отдельных функций
@@ -203,4 +206,12 @@ public static int Distance(int Dis){
         int D4 = D1 + D2 + D3;
         return D4;
 }
-}
+//15 Задание
+    public static void PArnost(int a){
+        int b = a%2;
+        if (b==0) {
+            System.out.println("Парное");
+        } else {
+            System.out.println("непарное");
+        }
+}}
