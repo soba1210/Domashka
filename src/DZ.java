@@ -114,6 +114,9 @@ System.out.println("Cо времени колонизации прошло " + D
         //15 Задание
         int OL = 2;
         PArnost(OL);
+        //16 Задание
+        TrainCrash(10,10);
+        //17  DronCrash(7,5,2,7,4,9);
 
 
     }
@@ -206,7 +209,7 @@ public static int Distance(int Dis){
         int D4 = D1 + D2 + D3;
         return D4;
 }
-//15 Задание
+//15 Написать функцию, которая принимает одно целое число в качестве параметра, и возвращает ответ о том четное это число или нет.
     public static void PArnost(int a){
         int b = a%2;
         if (b==0) {
@@ -214,4 +217,27 @@ public static int Distance(int Dis){
         } else {
             System.out.println("непарное");
         }
-}}
+}
+
+// 16 Два поезда движутся на скорости V1 и V2 на встречу друг другу. Между ними 10 км. пути.
+// Через 4 км пути первый поезд может свернуть на запасной путь. При заданных скоростях узнать столкнуться ли поезда.
+public static void TrainCrash(double V1, double V2){
+        if (4/V1*V2 < 6){
+            System.out.println("Поезда не столкнутся")
+        } else{
+            System.out.println("БУМ")
+        }
+}
+// 17. Для охраны территории завода было запущено два дрона.
+// Путь каждого дрона охватывает территорию, которая описывается окружностью с заданными радиусом и координатами центра.
+// Написать функцию, которая отвечает на вопрос, могут ли столкнуться дроны.
+    public static void DronCrash (double x1, double y1, double r1, double x2, double y2, double r2){
+        double AB = Math.sqrt(Math.pow((x2-x1), 2)+Math.pow((y2-y1),2));
+        if (AB > r1+r2){
+            System.out.println("Дроны не столкнутся");
+        }else {
+            System.out.println("Дроны столкнутся");
+        }
+    }
+
+}
