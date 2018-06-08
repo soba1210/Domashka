@@ -276,6 +276,7 @@ public static void TrainCrash(double V1, double V2){
             System.out.println("Дроны столкнутся");
         }
     }
+    // функция для 20ого задания
     public static void Gruz (double aaa, double bbb, double hhh, double mmm){
         if(mmm > 1){
             System.out.println("Превышение веса. Максимальный вес = 1 тонна");
@@ -287,4 +288,4 @@ public static void TrainCrash(double V1, double V2){
             }
         }
 
-}
+}}
